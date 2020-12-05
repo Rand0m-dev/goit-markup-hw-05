@@ -32,6 +32,8 @@ a {
 
 .main-nav .list {
   display: flex;
+  margin-top: 0;
+  margin-bottom: 0px;
   margin-left: 93px;
   padding: 0;
 }
@@ -40,14 +42,31 @@ a {
   margin-right: 50px;
 }
 
+.main-nav .select-nav {
+  color: var(--accent-text-color);
+  position: relative;
+  display: block;
+}
+
+.main-nav .select-nav::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background: #2196f3;
+  border-radius: 2px;
+}
+
 .main-nav .item:last-child {
   margin-right: 0;
 }
 
 .main-nav a {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--title-text-color);
 
@@ -55,10 +74,8 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-weight: 500;
-}
 
-.main-nav .select-nav {
-  color: var(--accent-text-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-nav a:hover,
@@ -85,6 +102,8 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-weight: 500;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link .icon {
@@ -222,10 +241,34 @@ a {
 
 .employment .item {
   margin-right: 30px;
+  position: relative;
 }
 
 .employment .item:last-child {
   margin-right: 0;
+}
+
+.employment .item-title {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(47, 48, 58, 0.8);
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
 }
 
 .about {
@@ -314,6 +357,7 @@ a {
   background-color: transparent;
   border: none;
   color: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about .icon-about:first-child {
@@ -362,6 +406,7 @@ a {
   border-radius: 4px;
   background-color: transparent;
   color: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients .icon-client {
@@ -469,6 +514,8 @@ a {
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.1);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .block-social .icon-about:hover,
@@ -511,6 +558,8 @@ a {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-button button:last-child {
@@ -541,6 +590,8 @@ a {
   width: 370px;
   background-color: var(--white-color);
   font-size: 0;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .galery .item:hover,
@@ -569,7 +620,39 @@ a {
   letter-spacing: 0.06em;
 }
 
-.galery p {
+.galery .image-product {
+  position: relative;
+  overflow: hidden;
+}
+
+.description {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galery .item:hover .description {
+  transform: translateY(0);
+}
+
+.description p {
+  margin: 0;
+  padding: 63px 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+}
+
+.signature p {
   margin: 0;
   padding-left: 24px;
   padding-bottom: 20px;
