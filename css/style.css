@@ -160,6 +160,13 @@ a {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero .button:hover,
+.hero .button:focus {
+  outline: none;
+  cursor: pointer;
 }
 
 .advantages h3 {
@@ -354,7 +361,7 @@ a {
   padding: 0;
   width: 44px;
   height: 44px;
-  background-color: transparent;
+  border-radius: 50%;
   border: none;
   color: #afb1b8;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -367,7 +374,6 @@ a {
 .about .icon-about:hover,
 .about .icon-about:focus {
   background-color: #2196f3;
-  border-radius: 50%;
   color: #ffffff;
 }
 
